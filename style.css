@@ -3,6 +3,8 @@ h1 {
 }
 h2 {
     text-align: center;
+    margin: 5px;
+    font-size: medium;
 }
 .row {
     display: flex;
@@ -22,7 +24,6 @@ h2 {
     width: 200px;
     overflow-y: auto;
     border: 1px solid #000;
-    padding: 10px;
 }
 
 .container_scrollable ul {
@@ -32,8 +33,7 @@ h2 {
 }
 
 .container_scrollable li {
-    padding: 5px 0;
-    border-bottom: 1px dashed green;
+    border: 1px solid #000;
     text-align: center;
 }
 
@@ -53,6 +53,15 @@ h2 {
     background-color: rgb(221, 239, 221);
 }
 
+#course_list li.active {
+    background-color: deepskyblue;
+    color: white; /* makes text readable */
+}
+
 #selected_course_list:nth-child(even) {
     background-color: rgb(221, 239, 221);
+}
+
+#selected_course_list:nth-child(odd) {
+    background-color: #fff;
 }

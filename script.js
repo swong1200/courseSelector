@@ -94,8 +94,9 @@ const Controller = ((model, view) => {
     } else {
       totalCredits -= curCourse[0].credit;
     }
-
-    dom.creditCounter.textContent = totalCredits;
+    if (totalCredits <= 18) {
+      dom.creditCounter.textContent = totalCredits;
+    }
   }
 
   function toggleCourse() {
@@ -106,12 +107,20 @@ const Controller = ((model, view) => {
           selectedCourses.delete(li.id);
           //   update color
           li.classList.remove('active');
-          console.log(selectedCourses);
         } else {
+          const courseId = Number(li.id[li.id.length - 1]);
+
+          const curCourse = courseList.getCourses.filter(
+            (course) => course.courseId === courseId
+          );
+
+          if (totalCredits + curCourse[0].credit > 18) {
+            alert('You can only choose up to 18 credits in one semester');
+            return;
+          }
           selectedCourses.add(li.id);
           //   update color
           li.classList.add('active');
-          console.log(selectedCourses);
         }
 
         // update count
