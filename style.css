@@ -1,0 +1,31 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.container_scrollable {
+    height: 300px;
+    width: 200px;
+    overflow-y: auto;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.container_scrollable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container_scrollable li {
+    padding: 5px 0;
+    border-bottom: 1px dashed green;
+}
+
+.container_scrollable li:last-child {
+    border-bottom: none;
+}
+
+.course.active {
+    background-color: deepskyblue;
+}

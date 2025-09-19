@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Selector</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
-    <div>
-        <ul id="course_list"></ul>
-    </div>
+    <h1>Class Selection Page</h1>
+    <section class="main row">
+        <div class="container_scrollable">
+            <h2>Available Courses</h2>
+            <ul id="course_list"></ul>
+        </div>
+        <div class="container_scrollable">
+            <h2>Selected Courses</h2>
+            <ul id="selected_course_list"></ul>
+        </div>
+    </section>
+    <section class="row">
+        <div>
+            <p>Total Credit : <span id="credit_counter"></span></p>
+        </div>
+        <div>
+            <button id="select_button">Select</button>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
