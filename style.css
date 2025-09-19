@@ -1,8 +1,22 @@
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
 .row {
     display: flex;
     flex-direction: row;
+    gap: 5vw;
 }
 
+.main {
+    justify-content: center;
+}
+
+.action {
+    justify-content: center;
+}
 .container_scrollable {
     height: 300px;
     width: 200px;
@@ -20,6 +34,7 @@
 .container_scrollable li {
     padding: 5px 0;
     border-bottom: 1px dashed green;
+    text-align: center;
 }
 
 .container_scrollable li:last-child {
@@ -28,4 +43,16 @@
 
 .course.active {
     background-color: deepskyblue;
+}
+
+#select_button {
+    margin-top: 1rem;
+}
+
+.course:nth-child(even) {
+    background-color: rgb(221, 239, 221);
+}
+
+#selected_course_list:nth-child(even) {
+    background-color: rgb(221, 239, 221);
 }

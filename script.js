@@ -156,7 +156,7 @@ const Controller = ((model, view) => {
     courseListPromise.then((list) => {
       courseList.newList = list;
       toggleCourse();
-      createCreditCounter(0);
+      dom.creditCounter.textContent = totalCredits;
       handleSelectButton();
     });
   }
