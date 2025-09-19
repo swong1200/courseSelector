@@ -37,10 +37,6 @@ h2 {
     text-align: center;
 }
 
-.container_scrollable li:last-child {
-    border-bottom: none;
-}
-
 .course.active {
     background-color: deepskyblue;
 }
@@ -58,10 +54,6 @@ h2 {
     color: white; /* makes text readable */
 }
 
-#selected_course_list:nth-child(even) {
+#selected_course_list li:nth-child(even) {
     background-color: rgb(221, 239, 221);
-}
-
-#selected_course_list:nth-child(odd) {
-    background-color: #fff;
 }
